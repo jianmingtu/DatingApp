@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
     this.cancelRegister.emit(false);
   } 
 
-  onClick(){
-    this.toastr.success("Data shown successfully !!", "tutsmake.com")
-}
+  // onClick(){
+  //   this.toastr.success("Data shown successfully !!", "tutsmake.com")
+  // }
 }

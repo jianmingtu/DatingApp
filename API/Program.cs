@@ -32,6 +32,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     ValidateAudience = false
   };
 });
+builder.Services.AddScoped<LogUserActivity>();
+
 var app = builder.Build();
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseCors(builder=>builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));

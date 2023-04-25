@@ -31,7 +31,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
     ButtonsModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    TimeagoModule.forRoot()
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -45,7 +46,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BsDatepickerModule,
     PaginationModule,
     ButtonsModule,
-    ModalModule
+    ModalModule,
+    TimeagoModule
   ]
 })
 export class SharedModule { }

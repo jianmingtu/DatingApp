@@ -42,14 +42,6 @@ namespace API.Data
 
 
 
-    // public async Task<Group> GetGroupForConnection(string connectionId)
-    // {
-    //     return await _context.Groups
-    //         .Include(x => x.Connections)
-    //         .Where(x => x.Connections.Any(c => c.ConnectionId == connectionId))
-    //         .FirstOrDefaultAsync();
-    // }
-
     public async Task<Message> GetMessage(int id)
         {
             return await _context.Messages.FindAsync(id);
@@ -113,11 +105,6 @@ namespace API.Data
     public void RemoveConnection(Connection connection)
     {
         _context.Connections.Remove(connection);
-    }
-
-    public async Task<bool> SaveAllAsync()
-    {
-      return await _context.SaveChangesAsync() > 0;
     }
 
     public async Task<Group> GetGroupForConnection(string connectionId)

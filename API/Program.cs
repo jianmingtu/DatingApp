@@ -24,16 +24,14 @@ builder.Services.AddDbContext<DataContext>(opt => {
 
 builder.Services.AddCors();
 builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddScoped<LogUserActivity>();
-builder.Services.AddScoped<ILikesRepository, LikesRepository>();
-builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddSignalR();
 builder.Services.AddSingleton<PresenceTracker>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 app.UseMiddleware<ExceptionMiddleware>();

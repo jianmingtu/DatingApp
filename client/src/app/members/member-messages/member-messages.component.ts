@@ -12,7 +12,6 @@ import { MessageService } from 'src/app/_services/message.service';
 export class MemberMessagesComponent implements OnInit {
   @ViewChild('messageForm') messageForm?: NgForm
   @Input() username?: string;
-
   messageContent = '';
   loading = false;
 
